@@ -7,6 +7,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    stylus: {
+      compile: {
+        options: {
+          compress: false
+        },
+        files: {
+          'dist/support.directive.css': 'lib/support.directive.styl'
+        }
+      }
+    },
     uglify: {
       angular: {
         src: 'dist/support.directive.js',
@@ -17,6 +27,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
 
-  grunt.registerTask('build', ['coffee', 'uglify']);
+  grunt.registerTask('build', ['coffee', 'stylus', 'uglify']);
 };
