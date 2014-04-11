@@ -60,6 +60,18 @@
   border-color: #fed044;
   box-shadow: 0 0 8px rgba(254,208,68,0.6);
 }
+.support-modal .modal-dialog .modal-epicenter .help-block {
+  display: block;
+  font-size: 12px;
+  color: #ccc;
+  margin: 5px 0 10px;
+}
+.support-modal .modal-dialog .modal-epicenter .error {
+  font-size: 14px;
+  margin: 0 0 20px;
+  font-weight: 600;
+  color: #ff3d3d;
+}
 .support-modal .modal-dialog .modal-footer {
   position: relative;
   padding: 15px;
