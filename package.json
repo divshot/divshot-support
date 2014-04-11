@@ -1,0 +1,20 @@
+{
+  "name": "divshot-support",
+  "version": "0.1.0",
+  "description": "Support interface utilities for Divshot.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divshot/divshot-support.git"
+  },
+  "author": "Divshot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/divshot/dio-support/issues"
+  },
+  "devDependencies": {
+    "uglifyjs": "~2.3.6",
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-coffee": "^0.10.1"
+  }
+}
