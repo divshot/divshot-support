@@ -24,6 +24,7 @@ angular.module('divshot.support', [])
             <div class="form-group">
               <textarea ng-model="$parent.body" class="form-control" id="body" placeholder="Message" rows="5"></textarea>
             </div>
+            <p class="help-block">Want to chat? Our devs hang out in #divshot on freenode.</p>
           </form>
         </div>
         <div class="modal-footer">
