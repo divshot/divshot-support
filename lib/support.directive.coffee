@@ -44,10 +44,17 @@ angular.module('divshot.support', [])
           windowClass: 'support-modal'
           controller: ($scope, $injector, $modalInstance) ->
             $scope.errorMessage = 'Please provide a valid subject and message.'
+
+            if $injector.has('divshot')
+              divshot = $injector.get('divshot')
+            else
+              console.error('dsSupportModal directive requires "divshot-api": https://github.com/divshot/divshot-api')
+              return
+
             $scope.submit = ->
               if $scope.subject and $scope.body
-                console.log 'send message!'
-                $modalInstance.close()
+                divshot.user.sendHelpRequest($scope.subject, $scope.body).then ->
+                  $modalInstance.close()
               else
                 if $injector.has('$notification')
                   $notification = $injector.get('$notification')

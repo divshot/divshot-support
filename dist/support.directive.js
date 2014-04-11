@@ -24,12 +24,20 @@
             template: this.modalTemplate,
             windowClass: 'support-modal',
             controller: function($scope, $injector, $modalInstance) {
+              var divshot;
               $scope.errorMessage = 'Please provide a valid subject and message.';
+              if ($injector.has('divshot')) {
+                divshot = $injector.get('divshot');
+              } else {
+                console.error('dsSupportModal directive requires "divshot-api": https://github.com/divshot/divshot-api');
+                return;
+              }
               $scope.submit = function() {
                 var $notification;
                 if ($scope.subject && $scope.body) {
-                  console.log('send message!');
-                  return $modalInstance.close();
+                  return divshot.user.sendHelpRequest($scope.subject, $scope.body).then(function() {
+                    return $modalInstance.close();
+                  });
                 } else {
                   if ($injector.has('$notification')) {
                     $notification = $injector.get('$notification');

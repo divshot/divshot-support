@@ -13,7 +13,7 @@ bower install divshot-support --save
 ### Support Modal
 
 * AngularJS
-* divshot-api
+* [divshot-api](https://github.com/divshot/divshot-api) > 0.6.15
 * angular-bootstrap (Modal Only)
 
 ## Usage with Angular
