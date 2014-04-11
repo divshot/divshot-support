@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module('divshot.support', [])
-  .directive 'dsSupportModalLink', ->
+  .directive 'dsSupportLink', ->
     restrict: 'A'
     scope:
       dsTitle: '@'

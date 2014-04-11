@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('divshot.support', []).directive('dsSupportModalLink', function() {
+  angular.module('divshot.support', []).directive('dsSupportLink', function() {
     return {
       restrict: 'A',
       scope: {

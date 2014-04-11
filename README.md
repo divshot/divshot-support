@@ -33,7 +33,7 @@ angular.modules('myApp', ['divshot.support']);
 HTML
 
 ```html
-<a ds-support-modal-link ds-title="Support Modal" ds-btn-label="Submit Message" ds-submit-callback="submitMessage()" ds-cancel-callback="cancelMessage()">Quick Support</a>
+<a ds-support-link ds-title="Support Modal" ds-btn-label="Submit Message" ds-submit-callback="submitMessage()" ds-cancel-callback="cancelMessage()">Quick Support</a>
 ```
 
 Controller
