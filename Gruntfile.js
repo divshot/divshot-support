@@ -2,6 +2,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     coffee: {
       compile: {
+        options: {
+          bare: true
+        },
         files: {
           'dist/support.directive.js': 'lib/support.directive.coffee'
         }
